@@ -44,16 +44,16 @@ function checkUsernameEle() {
 
     if (usernameValue != "") {
         if (checkUsernameReg.test(usernameValue)) {
-            changeCssStyle(tagObjectSets[0], tagObjectSets[1], tagObjectSets[2], "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入正确", "confirmCorrectBox", "1px solid orange", "orange");
+            changeCssStyle(tagObjectSets[0], tagObjectSets[1], tagObjectSets[2], "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入正确", "confirmCorrectBox", "1px solid orange", "orange");
             usernameCheckContainer = true;
         } else {
-            changeCssStyle(tagObjectSets[0], tagObjectSets[1], tagObjectSets[2], "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入错误,必须以字母开头且最少为3位最多位数为16位", 
+            changeCssStyle(tagObjectSets[0], tagObjectSets[1], tagObjectSets[2], "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入错误,必须以字母开头且最少为3位最多位数为16位", 
             		"confirmIncorrectBox", "1px solid red", "red");
             usernameCheckContainer = false;
             }
     } else {
 
-    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
+    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
     			"confirmIncorrectBox","1px solid red","red");
         usernameCheckContainer = false;
 
@@ -67,18 +67,18 @@ function checkPasswordEle() {
     if (passwordValue != "") {
         if (checkPasswordReg.test(passwordValue)) {
 
-            changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正确","confirmCorrectBox",
+            changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正确","confirmCorrectBox",
             		"1px solid orange","orange");
             passwordCheckContainer = true;
         } else {
            
-        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入错误，密码为字母数字下划线位数最少8位，最多32位",
+        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入错误，密码为字母数字下划线位数最少8位，最多32位",
         			"confirmIncorrectBox","1px solid red","red");
             passwordCheckContainer = false;
         }
 
     } else {
-    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
+    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
     			"confirmIncorrectBox","1px solid red","red");
         passwordCheckContainer = false;
     }
@@ -88,27 +88,27 @@ function checkPasswordEle() {
 
 function checkPasswordConfirm() {
    
-    var passwordValue = getElementObject("con_password").value;
+    var passwordValue = getElementObject("password").value;
     var confirmPasswordValue = getElementObject("con_password").value;
     var tagObjectSets = objectSet("checkConfirmPassword","con_password","textBox_4");
     if (passwordValue != "" && confirmPasswordValue != "") {
         if (passwordValue == confirmPasswordValue && passwordValue != null && passwordValue.length >= 8) {
 
-        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两次输入正确",
+        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两次输入正确",
         			"confirmCorrectBox","1px solid orange","orange");
             passwordConfirmCheckContainer = true;
 
 
         } else {
         	
-        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两次输入不匹配，请重新输入",
+        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两次输入不匹配，请重新输入",
         			"confirmIncorrectBox","1px solid red","red");
             passwordConfirmCheckContainer = false;
 
 
         }
     } else {
-    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
+    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
     			"confirmIncorrectBox","1px solid red","red");
         passwordConfirmCheckContainer = false;
     }
@@ -124,7 +124,7 @@ function checkEmail() {
     if (emailCheck != "") {
         if (emailReg.test(emailCheck)) {
 
-        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正确",
+        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正确",
         			"confirmCorrectBox","1px solid orange","orange");
             emailCheckContainer = true;
 
@@ -133,14 +133,14 @@ function checkEmail() {
 
         } else {
 
-        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;错误重新输入，例如vip@vip.com或vip@vip.cn或vip@vip.com.cn",
+        	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;错误重新输入，例如vip@vip.com或vip@vip.cn或vip@vip.com.cn",
         			"confirmIncorrectBox","1px solid red","red");
             emailCheckContainer = false;
 
         }
     } else {
 
-    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
+    	changeCssStyle(tagObjectSets[0],tagObjectSets[1],tagObjectSets[2],"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填选项，不可为空",
     			"confirmIncorrectBox","1px solid red","red");
         emailCheckContainer = false;
 
@@ -158,7 +158,7 @@ function submitCheck() {
     	
         //进行submit事件验证
         finalCheck.className = "confirmCorrectBox";
-        finalCheck.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过验证";
+        finalCheck.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过验证";
         tB1.style.color = "orange";
         tB6.style.color = "orange";
         return true;
@@ -168,7 +168,7 @@ function submitCheck() {
     }
     finalCheck.className = "confirmIncorrectBox";
 
-    finalCheck.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无法通过验证,请填写必填选项";
+    finalCheck.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无法通过验证,请填写必填选项";
     tB1.style.color = "red";
     tB6.style.color = "red";
     return false;
@@ -176,4 +176,12 @@ function submitCheck() {
 
 
 
+}
+function useLittleTrick(){
+	
+	document.getElementById("littleTrick").className="littleTrickTwo";
+	document.getElementById("dataForm").className="littleTrick";
+	
+	
+	
 }
