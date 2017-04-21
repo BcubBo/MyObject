@@ -129,7 +129,14 @@
 		document.getElementById("timeloop").innerHTML=timeString;
 		
 	}
-
+function useLittleTrick(){
+	
+	document.getElementById("littleTrick").className="littleTrickTwo";
+	document.getElementById("dataForm").className="littleTrick";
+	
+	
+	
+}
 	
 	/**
 	var container = "";
