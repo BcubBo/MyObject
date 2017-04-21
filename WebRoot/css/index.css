@@ -1,0 +1,40 @@
+	.divBlock_1{
+		font-size:60px;
+		color:white;
+		
+		text-align:center;
+	
+	}
+	.divBlock_2{
+		font-size:50px;
+		color:white;
+		
+		text-align:center;
+	
+	}
+	.divBlock_3{
+		font-size:40px;
+		color:white;
+		
+		
+		text-align:center;
+	
+	
+	}
+	.divBlock_4{
+
+
+		font-size:30px;
+		color:white;
+		text-align:center;
+	}
+	.firstBlockShow{
+
+		display:block;
+	}
+	.firstBlockHide{
+		display:none;
+	}
+	.firstBlock{
+		display:none;
+	}
