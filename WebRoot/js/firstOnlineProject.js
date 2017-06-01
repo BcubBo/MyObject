@@ -20,7 +20,7 @@
 		}
 	function showBlock(){
 			
-			document.getElementById("divBlock_2").innerHTML = "我怎么开始傲娇了。。。。这大叔的称谓好像真的不适合我，叫我小姐姐？额~~~~被自己恶心到了";
+			document.getElementById("divBlock_2").innerHTML = "我怎么开始傲娇了。。。。这大叔的称谓好像真的不适合我，叫我~~~~~~~~？额~~~~被自己恶心到了";
 			document.getElementById("divBlock_1").innerHTML="我会定期更新些东西，没事的时候来玩，感觉快疯了，被掏空";
 			
 			document.getElementById("divBlock_1").style.display="block";
